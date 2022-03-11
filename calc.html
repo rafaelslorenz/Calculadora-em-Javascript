@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="calc.css">
+    <script src="calc.js"></script>
+</head>
+<body>
+    <div id="corpoTela">
+        <div id="tela"></div>
+    </div>
+    <div id="calcbody">
+        <p id="resultado"></p>
+        <table border="1">
+            <tr class="redbtns">
+                <td colspan="2" button onclick="btLimparTela()">C</td>
+                <td button onclick="btdividir()">÷</td>
+            </tr>
+            <tr class="redbtns">
+                <td button onclick="btsomar()">+</td>
+                <td button onclick="btsubtrair()">-</td>
+                <td button onclick="btmultiplicar()">×</td>
+            </tr>
+            <tr>
+                <td button onclick="bt7()">7</td>
+                <td button onclick="bt8()">8</td>
+                <td button onclick="bt9()">9</td>
+            </tr>
+            <tr>
+                <td button onclick="bt4()">4</td>
+                <td button onclick="bt5()">5</td>
+                <td button onclick="bt6()">6</td>
+            </tr>
+            <tr>
+                <td button onclick="bt1()">1</td>
+                <td button onclick="bt2()">2</td>
+                <td button onclick="bt3()">3</td>
+            </tr>
+            <tr>
+                <td id="." button onclick="btponto()">.</td>
+                <td button onclick="bt0()">0</td>
+                <td button onclick="btigual()">=</td>
+            </tr>	
+        </table>
+    </div>
+</body>
+</html>
