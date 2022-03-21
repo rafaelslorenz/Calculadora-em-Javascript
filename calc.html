@@ -14,31 +14,31 @@
         <table border="1">
             <tr class="redbtns">
                 <td colspan="2" button onclick="btLimparTela()">C</td>
-                <td button onclick="btdividir()">÷</td>
+                <td button onclick="btoperacao('/')">÷</td>
             </tr>
             <tr class="redbtns">
-                <td button onclick="btsomar()">+</td>
-                <td button onclick="btsubtrair()">-</td>
-                <td button onclick="btmultiplicar()">×</td>
+                <td button onclick="btoperacao('+')">+</td>
+                <td button onclick="btoperacao('-')">-</td>
+                <td button onclick="btoperacao('*')">×</td>
             </tr>
-            <tr>
-                <td button onclick="bt7()">7</td>
-                <td button onclick="bt8()">8</td>
-                <td button onclick="bt9()">9</td>
+            <tr class="blackbtns">
+                <td button onclick="btnum('7')">7</td>
+                <td button onclick="btnum('8')">8</td>
+                <td button onclick="btnum('9')">9</td>
             </tr>
-            <tr>
-                <td button onclick="bt4()">4</td>
-                <td button onclick="bt5()">5</td>
-                <td button onclick="bt6()">6</td>
+            <tr class="blackbtns">
+                <td button onclick="btnum('4')">4</td>
+                <td button onclick="btnum('5')">5</td>
+                <td button onclick="btnum('6')">6</td>
             </tr>
-            <tr>
-                <td button onclick="bt1()">1</td>
-                <td button onclick="bt2()">2</td>
-                <td button onclick="bt3()">3</td>
+            <tr class="blackbtns">
+                <td button onclick="btnum('1')">1</td>
+                <td button onclick="btnum('2')">2</td>
+                <td button onclick="btnum('3')">3</td>
             </tr>
-            <tr>
+            <tr class="blackbtns">
                 <td id="." button onclick="btponto()">.</td>
-                <td button onclick="bt0()">0</td>
+                <td button onclick="btnum('0')">0</td>
                 <td button onclick="btigual()">=</td>
             </tr>	
         </table>

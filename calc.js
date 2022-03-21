@@ -11,7 +11,8 @@ function btLimparTela()
 
 function btponto()
 {
-    temp = document.getElementById('tela').innerHTML.trim();
+    debugger
+    let temp = document.getElementById('tela').innerHTML.trim();
     if ( temp == "")
     {
         document.getElementById('tela').innerHTML = "0."
@@ -22,128 +23,42 @@ function btponto()
     } 
 }
 
-function bt0()
+function btnum(numero)
 {
+    let lenghtEstaNoLimite = verificarLenght();
     if (document.getElementById('tela').innerHTML == "0") {
-        document.getElementById('tela').innerHTML = "0"
+        document.getElementById('tela').innerHTML = numero
     }
-    else 
+    else if (lenghtEstaNoLimite == false)
     {
-    document.getElementById('tela').innerHTML += '0';
+    document.getElementById('tela').innerHTML += numero;
     }
 }
 
-function bt1()
-{
-    var temp = verificarLenght();
-    if (temp == false) {
-        document.getElementById('tela').innerHTML += '1';
-    }
-    
-}
-
-function bt2()
-{
-    var temp = verificarLenght();
-    if (temp == false) {
-        document.getElementById('tela').innerHTML += '2';
-    }
-}
-
-function bt3()
-{
-    var temp = verificarLenght();
-    if (temp == false) {
-        document.getElementById('tela').innerHTML += '3';
-    }
-}
-
-function bt4()
-{
-    var temp = verificarLenght();
-    if (temp == false) {
-        document.getElementById('tela').innerHTML += '4';
-    }
-}
-
-function bt5()
-{
-    var temp = verificarLenght();
-    if (temp == false) {
-        document.getElementById('tela').innerHTML += '5';
-    }
-}
-
-function bt6()
-{
-    var temp = verificarLenght();
-    if (temp == false) {
-        document.getElementById('tela').innerHTML += '6';
-    }
-}
-
-function bt7()
-{
-    var temp = verificarLenght();
-    if (temp == false) {
-        document.getElementById('tela').innerHTML += '7';
-    }
-}
-
-function bt8()
-{
-    var temp = verificarLenght();
-    if (temp == false) {
-        document.getElementById('tela').innerHTML += '8';
-    }
-}
-
-function bt9()
-{
-    var temp = verificarLenght();
-    if (temp == false) {
-        document.getElementById('tela').innerHTML += '9';
-    }
-}
-
-function btsomar() {
+function btoperacao(operacaoParam) {
     valor1 = document.getElementById('tela').innerHTML;
     document.getElementById('tela').innerHTML = "";
-    operacao = '+';
-}
-
-function btsubtrair() {
-    valor1 = document.getElementById('tela').innerHTML;
-    document.getElementById('tela').innerHTML = "";
-    operacao = '-';
-}
-
-function btmultiplicar() {
-    valor1 = document.getElementById('tela').innerHTML;
-    document.getElementById('tela').innerHTML = "";
-    operacao = '*';
-}
-
-function btdividir() {
-    valor1 = document.getElementById('tela').innerHTML;
-    document.getElementById('tela').innerHTML = "";
-    operacao = '/';
+    operacao = operacaoParam;
 }
 
 function btigual() {
     valor2 = document.getElementById('tela').innerHTML;
+    let resultado;
+
     if (operacao == '+') {
-        document.getElementById('tela').innerHTML = parseFloat(valor1) + parseFloat(valor2);
+        resultado = parseFloat(valor1) + parseFloat(valor2);
     }
     else if (operacao == '-') {
-        document.getElementById('tela').innerHTML = parseFloat(valor1) - parseFloat(valor2);
+        resultado = parseFloat(valor1) - parseFloat(valor2);
     }
     else if (operacao == '*') {
-        document.getElementById('tela').innerHTML = parseFloat(valor1) * parseFloat(valor2);
+        resultado = parseFloat(valor1) * parseFloat(valor2);
     }
     else if (operacao == '/') {
-        document.getElementById('tela').innerHTML = parseFloat(valor1) / parseFloat(valor2);
+        resultado = parseFloat(valor1) / parseFloat(valor2);
     }
+    
+    document.getElementById('tela').innerHTML = resultado;
 }
 
 function verificarLenght()
